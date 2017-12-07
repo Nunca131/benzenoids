@@ -1,0 +1,56 @@
+
+\begin{tikzpicture}[scale=0.7]
+\tikzstyle{internal vertex} = [inner sep=0, draw, circle, fill=black, color=black]
+\tikzstyle{border vertex} = [inner sep=0, draw, circle, fill=blue, color=blue]
+\tikzstyle{border 3 vertex} = [inner sep=1.2, draw, circle, fill=blue, color=blue]
+\tikzstyle{border edge} = [draw, color=blue]
+\tikzstyle{internal edge} = [draw, color=black]
+\node[border vertex] (v_1) at (0.00000, 0.00000) {};
+\node[border vertex] (v_2) at (0.86603, 0.50000) {};
+\node[border 3 vertex] (v_3) at (1.73205, 0.00000) {};
+\node[border 3 vertex] (v_4) at (1.73205, -1.00000) {};
+\node[border vertex] (v_5) at (0.86603, -1.50000) {};
+\node[border vertex] (v_6) at (0.00000, -1.00000) {};
+\node[border vertex] (v_7) at (2.59808, 0.50000) {};
+\node[border vertex] (v_8) at (3.46410, 0.00000) {};
+\node[border 3 vertex] (v_9) at (3.46410, -1.00000) {};
+\node[border 3 vertex] (v_10) at (2.59808, -1.50000) {};
+\node[border vertex] (v_13) at (5.19615, -1.00000) {};
+\node[border 3 vertex] (v_14) at (4.33013, -1.50000) {};
+\node[border vertex] (v_15) at (2.59808, -2.50000) {};
+\node[internal vertex] (v_18) at (4.33013, -2.50000) {};
+\node[border 3 vertex] (v_19) at (3.46410, -3.00000) {};
+\node[border vertex] (v_20) at (6.06218, -1.50000) {};
+\node[border vertex] (v_21) at (6.06218, -2.50000) {};
+\node[border 3 vertex] (v_22) at (5.19615, -3.00000) {};
+\node[border vertex] (v_27) at (3.46410, -4.00000) {};
+\node[border vertex] (v_29) at (5.19615, -4.00000) {};
+\node[border vertex] (v_30) at (4.33013, -4.50000) {};
+\path[border edge] (v_1) -- (v_2);
+\path[border edge] (v_2) -- (v_3);
+\path[internal edge] (v_3) -- (v_4);
+\path[border edge] (v_4) -- (v_5);
+\path[border edge] (v_5) -- (v_6);
+\path[border edge] (v_6) edge node [left] {5} (v_1);
+\path[border edge] (v_3) -- (v_7);
+\path[border edge] (v_7) edge node [above right] {3} (v_8);
+\path[border edge] (v_8) -- (v_9);
+\path[internal edge] (v_9) -- (v_10);
+\path[border edge] (v_10) edge node [below left] {1} (v_4);
+\path[border edge] (v_13) -- (v_14);
+\path[border edge] (v_14) edge node [above right] {1} (v_9);
+\path[border edge] (v_10) edge node [below left] {2} (v_15);
+\path[internal edge] (v_14) -- (v_18);
+\path[internal edge] (v_18) -- (v_19);
+\path[border edge] (v_19) -- (v_15);
+\path[border edge] (v_13) -- (v_20);
+\path[border edge] (v_20) edge node [right] {4} (v_21);
+\path[border edge] (v_21) -- (v_22);
+\path[internal edge] (v_22) -- (v_18);
+\path[border edge] (v_19) -- (v_27);
+\path[border edge] (v_22) -- (v_29);
+\path[border edge] (v_29) edge node [below right] {4} (v_30);
+\path[border edge] (v_30) -- (v_27);
+\end{tikzpicture}
+
+\end{document}

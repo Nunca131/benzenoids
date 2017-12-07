@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1]
+\tikzstyle{every node} = [inner sep=3.5, draw, circle]
+\tikzstyle{edge} = [draw, line width=1.0]
+\tikzstyle{periedge} = [draw, line width=1.0]
+\node[] (0_0_0) at (0.000000, 1.400000) {};
+\node[] (0_0_1) at (1.212436, 0.700000) {};
+\node[] (1_-1_0) at (1.212436, -0.700000) {};
+\node[] (0_-1_1) at (0.000000, -1.400000) {};
+\node[] (0_-1_0) at (-1.212436, -0.700000) {};
+\node[] (-1_0_1) at (-1.212436, 0.700000) {};
+\draw[periedge] (-1_0_1) -- (0_0_0);
+\draw[periedge] (0_0_0) -- (0_0_1);
+\draw[periedge] (0_0_1) -- (1_-1_0);
+\draw[periedge] (0_-1_1) -- (1_-1_0);
+\draw[periedge] (0_-1_0) -- (0_-1_1);
+\draw[periedge] (-1_0_1) -- (0_-1_0);
+\end{tikzpicture}
