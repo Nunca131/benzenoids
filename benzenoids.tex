@@ -160,42 +160,69 @@ we investigate convexity numbers of several important families of benzenoids.
 
 \section{Introduction}
 
-\emph{Benzenoids} form an important family of graphs. The reader is referred to the books \cite{cyvin_1988,gutman1989}. Each benzenoid can be uniquely described by 
-a \emph{boundary-edges code} \cite{hansen1996}, a special sequence of numbers counting the number 
-of edges between two vertices of valence 3, following the perimeter counter-clockwise. 
-Benzene is an exception and is sometimes not
-considered as a benzenoid. Figures \ref{fig3} and \ref{fig1} depict examples of benzenoid systems together with corresponding numbers in boundary-edges codes.
+\emph{Benzenoids} form an important family of graphs that describe a class
+of multi-ringed hydrocarbon compounds. They have attracted considerable
+attention in graph theory, see e.g.\ the books
+\cite{cyvin_1988,gutman1989}. A benzenoid is a finite, 2-connected subgraph
+of the hexagonal lattice. In particular, therefore, it is a plane graph
+such that each inner face is a regular hexagon.  A benzenoid is called
+\emph{Kekul{\'a}an} if it has a perfect matching. In chemistry terms,
+Kekul{\'a}an benzenoids are those that describe aromatic compounds.  Again
+motivated by chemical terminology, a benzenoid $G$ is \emph{catacondensed}
+if all its vertices are located on the perimeter, i.e., if $G$ is
+outerplanar; otherwise it is called \emph{pericondensed}.
 
-\Tomo{Make sure we define catacondensed and pericondensed benzenoids.}
+Each benzenoid, which the exception of benzene -- the hexagon graph -- can
+be uniquely described by a \emph{boundary-edges code} \cite{hansen1996}, a
+special sequence of numbers counting the number of edges between two
+vertices of valence 3, following the perimeter counter-clockwise.  Figure
+\ref{fig:xample1} depicts examples of benzenoid systems together with
+corresponding numbers in boundary-edges codes.
 
 \begin{figure}
-\centering
-\includegraphics{figures/fig3}
-\label{fig3}
-\caption{A catacondensed benzenoid with boundary-edges code {\tt 532151153121} composed of 7 hexagons.}
+\begin{center}
+\begin{tabular}{ccc}
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics{figures/fig3}
+  \end{minipage}
+  &&
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics{figures/fig1}
+  \end{minipage}
+  \\[3mm]
+  \texttt{532151153121} && \texttt{5314421}
+\end{tabular}
+\end{center}
+\caption{Examples of a catacondensed benzenoid with 7 hexagons (left) and a
+  pericondensed benzenoid with 5 hexagons (right) and their boundary-edges
+  codes.}
+\label{fig:xample1}
 \end{figure}
 
+A path on the hexagonal lattice $\mathcal{H}$ is a sequence of hexagonal
+faces such that two consecutive hexagonal faces share exactly one
+edge. This gives rise to a distance measure between two hexagons
+$a,b\in\mathcal{H}$ as the minimal length of a path connecting them. The
+interval $I_\mathcal{H}(a,b)$ comprises all hexagons on a shortest path
+from $a$ to $b$. Since a benzenoid can be viewed as embedded in
+$\mathcal{H}$, the shortest paths can be determined both within the lattice
+$\mathcal{H}$ and within the benzenoid graph $G$. While the distances
+satisfy $d_{\mathcal{H}}(a,b)\le d_G(a,b)$, there is no obvious
+relationship between the corresponding intervals $I_\mathcal{H}(a,b)$ and
+$I_G(a,b)$.
 
-%\end{figure}
-
-% \centering
-\begin{figure}
-\centering
- \includegraphics{figures/fig1}
- \label{fig1}\quad
- \caption{ A pericondensed benzenoid with boundary-edges code {\tt 5314421}, composed of of 5 hexagons. } 
-\end{figure}
-
-
-Recently, a special subfamily of \emph{convex benzenoids} has been introduced by Cruz, Gutman and Rada in \cite{CruGutRad12})
-and enumerated by in \cite{basic2017}.
-
+Recently, a special subfamily of \emph{convex benzenoids} has been
+introduced by Cruz, Gutman and Rada in \cite{CruGutRad12}, see also
+\cite{Rada:04} and enumerated by in \cite{basic2017}.
 \begin{definition}
 \label{def:original}
-A benzenoid system $B$ is \emph{convex} if for any pair of its hexagons $a$ and $b$ the whole interval $I_\mathcal{H}(a,b)$ is contained in $B$.
+A benzenoid system $B$ is \emph{convex} if for any pair of its hexagons $a$
+and $b$ the whole interval $I_\mathcal{H}(a,b)$ is contained in $B$.
 \end{definition}
-
-The main purpose of this paper is to investigate various generalizations of convexity.
+The main purpose of this paper is to investigate various generalizations of
+convexity.
 
 \section{Boundary edges code revisited}
 
