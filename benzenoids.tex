@@ -11,7 +11,7 @@
 \usepackage{authblk}
 \usepackage{caption}
 \usepackage{subcaption}
-
+\usepackage[normalem]{ulem}
 
 \usepackage{geometry}
  \geometry{
@@ -96,10 +96,10 @@
 \newcommand\TODO[1]{\textcolor{red}{#1}}
 \newcommand\Tomo[1]{\textcolor{brown}{Tomo: #1}}
 \newcommand\Nino[1]{\textcolor{green}{Nino: #1}}
-\newcommand\Nancy[1]{\textcolor{Nancy: violet}{#1}}
-\newcommand\Sarah[1]{\textcolor{Sarah: cyan}{#1}}
-\newcommand\Jorg[1]{\textcolor{J\"{o}rg: blue}{#1}}
-\newcommand\Thomas[1]{\textcolor{Thomas: orange}{#1}}
+\newcommand\Nancy[1]{\textcolor{violet}{Nancy: #1}}
+\newcommand\Sarah[1]{\textcolor{cyan}{Sarah: #1}}
+\newcommand\JF[1]{\textcolor{blue}{J\"{o}rg":#1}}
+\newcommand\Thomas[1]{\textcolor{orange}{Thomas: #1}}
 \newcommand\Patrick[1]{\textcolor{red}{Patrick: #1}}
 
 
@@ -215,7 +215,7 @@ $I_G(a,b)$.
 
 Recently, a special subfamily of \emph{convex benzenoids} has been
 introduced by Cruz, Gutman and Rada in \cite{CruGutRad12}, see also
-\cite{Rada:04} and enumerated by in \cite{basic2017}.
+\cite{Rada:04} and enumerated by \TODO{By whom} in \cite{basic2017}.
 \begin{definition}
 \label{def:original}
 A benzenoid system $B$ is \emph{convex} if for any pair of its hexagons $a$
@@ -227,7 +227,7 @@ convexity.
 \section{Boundary edges code revisited}
 
 \begin{definition}
-Let $c$ be a code. By $len(c)$ we denote the length of the code, ie. the number of symbols appearing in it, let $sum(c)$ denote the sum of all numbers of the code and let $con(c)$ we donote its \emph{contents}, that is incresing sequence of numbers appearing in $c$.
+Let $c$ be a code. By $len(c)$ we denote the length of the code, ie. the number of symbols appearing in it, let $sum(c)$ denote the sum of all numbers of the code and let $con(c)$ \TODO{denote} \sout{we donote} its \emph{contents}, that is incre\TODO{a}sing sequence of numbers appearing in $c$.
 \end{definition}
 For instance len({\tt 5314421}) = 7, sum({\tt 5314421}) = 20, con({{\tt 5314421}) = {\tt 12345}
 
@@ -248,7 +248,7 @@ The winding of a valid benzenoid code $c$ is equal to $w(c) = 6$.
 
 \section{Isometric benzenoids}
 
-In a convex benzenoid $B$ we require that all shortest paths between any two hexagons belong to $B$. If we relax the condition and require that at least one shortest path belongs to $B$ .
+In a convex benzenoid $B$ we require that all shortest paths between any two hexagons belong to $B$. If we relax the condition and require that at least one shortest path belongs to $B$ \TODO{Then what?}.
 
 \begin{definition}
 \label{def:isometric}
@@ -269,11 +269,11 @@ A benzeniod is isometric if the distances within benzenoid are the same as in th
 Each convex benzenoid $B$ is isometric.
 \end{theorem}
 \begin{proof}
-Take any shortest path $p$ between two hexagons $a$ and $b$ a convex benzenoid $B$. Since $B$ contains the whole interval between $a$ and $b$ the distance in $B$
+Take any shortest path $p$ between two hexagons $a$ and $b$ \TODO{of} a convex benzenoid $B$. Since $B$ contains the whole interval between $a$ and $b$ the distance in $B$
 between $a$ and $b$ is the same as the distance in the hexagonal grid. Hence $B$ must be isometric.
 \end{proof}
 
-In \cite{basic2017} one can find among other things the following results. Convex benzenoids admit boundaries in 6 directions.  Each convex benzenoid is obtained from an equilateral triangle by truncating some of its vertices. There exist 6 convex half-planes. Each of them has the code {\tt \ldots 2222222 \ldots}. In \cite{basic2017a} infinite convex benzenoids were studied. We will use and generalize the following characterization of convex benzenoids.
+In \cite{basic2017} one can find among other things the following results. Convex benzenoids admit boundaries in 6 directions.  Each convex benzenoid is obtained from an equilateral triangle by truncating some of its vertices. There exist 6 convex half-planes. Each of them has the code {\tt \ldots\,2222222\,\ldots}. In \cite{basic2017a} infinite convex benzenoids were studied. We will use and generalize the following characterization of convex benzenoids.
 
 \begin{theorem}
 A benzenoid is \emph{convex} if and only if it has no{ \tt 1} in its boundary edges code.
@@ -384,15 +384,15 @@ $\bullet$ $con(H) = 13$
 
 $\bullet$ $con(H) = 123$
 
-Note that the other possiblities, such as $con(H) = 12$ are ruled out since they ar unbalenced and would never produce $w(H) = 0$.
+Note that the other possiblities, such as $con(H) = 12$ are ruled out since they ar\TODO{e} unbal\sout{e}\TODO{a}nced and would never produce $w(H) = 0$.
 
 
 Case $con(H) = 2$ gives rise exactly to convex half-planes.
 
-Consider now $con(H) = 13$. It is not hard to see that if $H \neq {\tt \ldots 131313131313 \ldots}$ then there must be at least two consecutive values of 3 present in the code. However, since no two consecutive values of 1 are allowed in a quasi-convex case, that would imply $w(H) \neq 0$, a contradiction.
+Consider now $con(H) = 13$. It is not hard to see that if $H \neq {\tt \ldots\,131313131313\,\ldots}$ then there must be at least two consecutive values of 3 present in the code. However, since no two consecutive values of 1 are allowed in a quasi-convex case, that would imply $w(H) \neq 0$, a contradiction.
 
-Finally let $con(H) = 123$. If we have a sequence of 2s that is not infinite in both directions, the last 2 in the sequence must be followed by a 3. This, in turn, cannot be followed either by 2 or 3. So we must have a local picture ${\tt \ldots 22231}$. This implies teh rest of the sequence 
-${\tt \ldots 22231313131 \ldots}$. Unfortunately such a sequence is bent
+Finally let $con(H) = 123$. If we have a sequence of 2s that is not infinite in both directions, the last 2 in the sequence must be followed by a 3. This, in turn, cannot be followed either by 2 or 3. So we must have a local picture ${\tt \ldots\,22231}$. This implies t\TODO{h}e\sout{h} rest of the sequence 
+${\tt \ldots\,22231313131\,\ldots}$. Unfortunately such a sequence is bent
 and cannot be continued to form a quasi-convex $H$ with $w(H) = 0$.
 
  
@@ -484,7 +484,7 @@ Among all benzenoids on $n$ hexagons identify the ones with extreme values of co
 One may ask a practical question concerning convexity number of benzenoids
 
 \begin{problem}
-Explore the relationship between convexity number of existing benzenoids and there physical and chemical properties.
+Explore the relationship between convexity number of existing benzenoids and the\TODO{i}r\sout{e} physical and chemical properties.
 \end{problem}
 
 Convexity number does not tell us anything about the distribution of average consecutive numbers of the boundary edges code.
@@ -503,7 +503,7 @@ For every $k$ we have $1\leq A(c(B),k) \leq A(c(b),k+1) \leq 3$\footnote{not sur
 
 
 \begin{problem}
-Study the distribution of $a(c(B),i,k)$ for small values of $k$ (up to the convexity number of $B$. Compare the minimum with the average and maximum.
+Study the distribution of $a(c(B),i,k)$ for small values of $k$ (up to the convexity number of $B$\TODO{)}. Compare the minimum with the average and maximum.
 \end{problem}
 
 
@@ -989,7 +989,7 @@ Always $2$ since the smallest number adjacent to $1$ is $3$.
 \TODO{other Fundings?}\\
 TG would like to thank the Deutsche Forschungsgemeinschaft (DFG STA 850/19-2 within SPP 1738).
 All the authors thank the DAAD - PPP Slowenien "Mathematical Foundations of Selected 
-Topics in Science".
+Topics in Science". \JF{Have to thank denbi here}
  
 %\nocite{*}
 
